@@ -9,8 +9,6 @@ Prévoir entre une heure et deux heures maximum pour ce test. Le but n'étant pa
 ### Question 2
 - Créer une modale qui apparaît au click sur l'une des lignes du tableau, qui montre toutes les information de la cryptomonnaie sélectionnée. 
 
-
-
 ### Question 3
 - Au click sur le nom d'une des colonnes, il y a quelques problèmes au niveau de la fonction de tri du tableau, à toi de trouver et corriger le problème
 
