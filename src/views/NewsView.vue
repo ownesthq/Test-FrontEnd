@@ -33,7 +33,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, onMounted } from 'vue';
+import {
+  defineComponent, ref, onMounted, watch,
+} from 'vue';
 import { useStore } from 'vuex';
 
 export default defineComponent({
@@ -47,6 +49,10 @@ export default defineComponent({
     };
 
     onMounted(() => getNews());
+
+    watch(() => store.state.news.news, () => {
+      news.value = store.state.news.news;
+    });
 
     return {
       news,
