@@ -3,7 +3,7 @@
 ## Test Front-End
 Prévoir entre une heure et deux heures maximum pour ce test. Le but n'étant pas de le finir mais d'évaluer la manière dont vous allez aborder les problèmes rencontrés.
 
-Créez votre propre branche à partir de main et travaillez dessus. À la moindre question, arthur@ownest.io ou valentin@ownest.io
+Forkez le projet sur votre compte github personnel et travaillez dessus. À la moindre question, arthur@ownest.io ou valentin@ownest.io
 
 ### Question 1
 - Certaines news sont vide, il faudrait gérer ce cas
