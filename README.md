@@ -3,7 +3,7 @@
 ## Test Front-End
 Prévoir entre une heure et deux heures maximum pour ce test. Le but n'étant pas de le finir mais d'évaluer la manière dont vous allez aborder les problèmes rencontrés.
 
-Forkez le projet sur votre compte github personnel et travaillez dessus. À la moindre question, arthur@ownest.io ou valentin@ownest.io
+Récuperez le projet sur votre PC et une fois terminé, *ne commitez pas, ne pushez pas le code* mais faites un .zip du dossier complet et envoyez le nous par mail (si possible, merci de supprimer le dossier `node_modules`. À la moindre question, arthur@ownest.io ou valentin@ownest.io
 
 ### Question 1
 - Certaines news sont vide, il faudrait gérer ce cas
