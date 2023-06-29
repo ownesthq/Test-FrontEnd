@@ -35,7 +35,6 @@ import {
   defineComponent,
   computed,
   ref,
-  emit,
 } from 'vue';
 
 export default defineComponent({
@@ -46,7 +45,7 @@ export default defineComponent({
       default: () => ([]),
     },
   },
-  setup(props) {
+  setup(props, { emit }) {
     const sortTarget = ref('');
     const sortDir = ref('');
 

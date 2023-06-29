@@ -14,22 +14,22 @@ export default {
   getters: {
   },
   mutations: {
-    saveNews(state: NewsState, news: any) {
+    saveNews(state: NewsState, news: Article[]) {
       state.news = news;
     },
   },
   actions: {
-    async fetchNews({ commit, state }: any) {
+    async fetchNews({ commit }: any) {
       axios.get('https://min-api.cryptocompare.com/data/v2/news/?lang=EN')
         .then((res: any) => {
           commit('saveNews', res.data.Data);
-          console.log(res);
+          console.log({ res });
         })
         .catch((e) => {
           console.log(e);
         });
     },
-    async getNews({ commit, state, dispatch }: any) {
+    async getNews({ state, dispatch }: any) {
       await dispatch('fetchNews');
       return state.news;
     },
