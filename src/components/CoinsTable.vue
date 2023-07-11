@@ -30,7 +30,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import {
   defineComponent,
   computed,
@@ -46,40 +46,40 @@ export default defineComponent({
     },
   },
   setup(props, { emit }) {
-    const sortTarget = ref('');
-    const sortDir = ref('');
+    const sortTarget = ref('')
+    const sortDir = ref('')
 
     const sortedCoins = computed(() => {
-      const v = props.coins.slice(0).sort((a, b) => {
-        let modifier = 1;
-        if (sortDir.value === 'desc') modifier = -1;
+      const v = props.coins.slice(0).sort((a: any, b: any) => {
+        let modifier = 1
+        if (sortDir.value === 'desc') modifier = -1
 
-        if (a.USD[sortTarget.value] < b.USD[sortTarget.value]) return -1 * modifier;
-        if (a.USD[sortTarget.value] > b.USD[sortTarget.value]) return 1 * modifier;
-        return 0;
-      });
-      return v;
-    });
+        if (a.USD[sortTarget.value] < b.USD[sortTarget.value]) return -1 * modifier
+        if (a.USD[sortTarget.value] > b.USD[sortTarget.value]) return 1 * modifier
+        return 0
+      })
+      return v
+    })
 
-    const openDetails = (coinDetails) => {
-      emit('coins:open', coinDetails);
-    };
+    const openDetails = (coinDetails: any) => {
+      emit('coins:open', coinDetails)
+    }
 
-    const sort = (s) => {
+    const sort = (s: string) => {
       if (s === sortTarget.value) {
-        sortDir.value = sortDir.value === 'asc' ? 'desc' : 'asc';
+        sortDir.value = sortDir.value === 'asc' ? 'desc' : 'asc'
       }
-      sortTarget.value = s;
-    };
+      sortTarget.value = s
+    }
 
     return {
       sortTarget,
       sortDir,
       sortedCoins,
       openDetails,
-      sort,
-    };
-  },
+      sort
+    }
+  }
 });
 
 </script>
